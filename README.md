@@ -29,4 +29,5 @@ When adding anything, you also add a link so you can click the name and arrive d
 
 - [ ] Automaticly update links based on episode number
 - [ ] Automaticly update episode counts based on user navigation
+- [ ] Find a new name :(
 - [ ] Find ideas to make it better :)
