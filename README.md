@@ -19,7 +19,7 @@ When adding anything, you also add a link so you can click the name and arrive d
 ## Install it
 
 - Clone the project anywhere on your computer
-- Then on google chrome go to `chrome://extensions`
+- Then on google chrome (or any chromium based browser) go to `chrome://extensions`
 - Enable developper mode
 - Click on `Load unpacked`
 - Select the folder in which the project is
