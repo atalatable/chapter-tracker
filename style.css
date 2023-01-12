@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+*:focus {
+    outline: none;
+}
+
+body {
+    background-color: rgb(38, 39, 60);
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #3d5585; 
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #808fac; 
+}
+
+hr {
+    height: 1px;
+    width: 50%;
+    background-color: white;
+}
+
+#container {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+
+#container h1 {
+    margin: 40px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#episodes-container {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+
+.episode {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 20px);
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.episode .count {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin: 0 20px;
+}
+
+.episode .count input {
+    width: 35px;
+    background: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    text-align: right;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.episode a:hover {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px 8px 8px 0;
+}
+
+.episode a {
+    flex-grow: 1;
+    padding: 10px 10px 10px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    text-decoration: none;
+    color: white;
+}
+
+#episodes-container p {
+    text-align: center;
+}
+
+#add-form:not(.hide) {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#add-form input[type="text"] {
+    width: 80%;
+    background-color: #3d5585;
+    font-family: 'Roboto Mono', monospace;
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+*.hide {
+    display: none;
+}
+
+::placeholder {
+    color: rgb(176, 176, 176);
+}
+
+button, input[type="submit"] {
+    background: #5E5DF0;
+    border-radius: 100%;
+    padding: 0;
+    width: 20px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-weight: 700;
+    opacity: 1;
+    outline: 0 solid transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    word-break: break-word;
+    border: 0;
+}
+
+button:hover {
+    box-shadow: #5E5DF0 0 10px 30px -10px;
+}
+
+button:active {
+    transform: translate(1px, 1px);
+}
+
+button:not(.text-button) {
+    box-shadow: #5E5DF0 0 0 10px;
+    height: 20px;
+}
+
+button.delete, input.delete {
+    box-shadow: #f32424 0 0 10px;
+    background: #f32424;
+}
+
+button.delete:not(#cancel-button):focus {
+    background: rgb(23, 168, 23);
+    box-shadow: rgb(34, 197, 34) 0 0 10px;
+    color: black;
+}
+
+button.text-button, input[type="submit"] {
+    width: fit-content;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 8px 40px;
+}
+
+#close {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    margin: 0;
+}

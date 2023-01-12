@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Track Mangas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="close">X</button>
+    <div id="container">
+        <h1>Chapter Tracker</h1>
+        <hr/>
+        <div id="episodes-container">
+
+        </div>
+        <hr/>    
+        <button id="add-button" class="text-button">Add</button>
+        
+        <form action="/" id="add-form" class="hide">
+            <input type="text" name="name" id="name" placeholder="Enter Name" autocomplete="off">
+            <input type="text" name="link" id="link" placeholder="Enter link" autocomplete="off" pattern="(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})">
+            <div class="buttons">
+                <button class="text-button delete" id="cancel-button">Cancel</button>
+                <input type="submit" value="Add">
+            </div>
+        </form>
+    </div>
+</body>
+<script src="content.js" defer></script>
+</html>
