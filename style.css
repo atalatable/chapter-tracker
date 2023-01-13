@@ -65,6 +65,7 @@ hr {
 .episode {
     display: flex;
     align-items: center;
+    border-radius: 5px;
     width: calc(100% - 20px);
     justify-content: space-between;
     padding: 0 10px;
@@ -88,10 +89,14 @@ hr {
     font-family: 'Roboto Mono', monospace;
 }
 
-.episode a:hover {
+/* .episode a:hover {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     padding: 10px 8px 8px 0;
+} */
+
+a:hover {
+    background-color: #41516f;
 }
 
 .episode a {

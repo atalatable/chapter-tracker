@@ -2,22 +2,22 @@ function setListeners() {
     document.querySelectorAll(".minus").forEach(button => {
         button.addEventListener('click', (e) => {
             let input = e.target.parentNode.children[1];
+            updateCount(e.target.parentNode.parentNode, parseInt(input.value)-1, parseInt(input.value))
             input.value = (parseInt(input.value) - 1).toString();
-            updateCount(e.target.parentNode.parentNode, parseInt(input.value))
         });
     });
 
     document.querySelectorAll(".plus").forEach(button => {
         button.addEventListener('click', (e) => {
             let input = e.target.parentNode.children[1];
+            updateCount(e.target.parentNode.parentNode, parseInt(input.value) + 1, parseInt(input.value))
             input.value = (parseInt(input.value) + 1).toString();
-            updateCount(e.target.parentNode.parentNode, parseInt(input.value))
         });
     });
 
     document.querySelectorAll(".episode-number").forEach(counter => {
         counter.addEventListener('input', (e) => {
-            updateCount(counter.parentNode.parentNode, parseInt(counter.value));
+            updateCount(counter.parentNode.parentNode, parseInt(counter.value), 0);
         })
     });
 
@@ -39,11 +39,26 @@ function setListeners() {
 document.querySelector("#add-button").addEventListener('click', addLogic);
 
 
-function updateCount(e, v) {
+function updateCount(e, v, previous) {
     let name = e.children[0].children[0].innerHTML;
     chrome.storage.sync.get(name, function(result) {
+        let strg = result[name].split("/-~")
+        let url = ""
         let obj = {};
-        obj[name] = (v).toString() + "/-~" + result[name].split("/-~")[1]
+
+        if(previous != 0) {
+            if(strg[1].includes((previous).toString())) {
+                url = strg[1].replace((previous).toString(), (v.toString()))
+            } else {
+                url = strg[1] 
+            }
+        } else {
+            url = strg[1]
+        }
+
+        e.children[0].href = url        
+
+        obj[name] = (v).toString() + "/-~" + url
         chrome.storage.sync.set(obj);
     });
 }

@@ -27,7 +27,7 @@ When adding anything, you also add a link so you can click the name and arrive d
 
 ## To do
 
-- [ ] Automaticly update links based on episode number
+- [ ] Optimize algorithm that update links based on episode number
 - [ ] Automaticly update episode counts based on user navigation
 - [ ] Find a new name :(
 - [ ] Make an icon/logo
