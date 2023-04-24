@@ -32,3 +32,4 @@ When adding anything, you also add a link so you can click the name and arrive d
 - [ ] Find a new name :(
 - [ ] Make an icon/logo
 - [ ] Find ideas to make it better :)
+- [ ] Have a global server and have accounts to share lists
