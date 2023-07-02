@@ -48,7 +48,9 @@ function updateCount(e, v, previous) {
 
         if(previous != 0) {
             if(strg[1].includes((previous).toString())) {
-                url = strg[1].replace((previous).toString(), (v.toString()))
+                url = strg[1].substring(0, strg[1].lastIndexOf((previous.toString()))) 
+                    + (v).toString() 
+                    + strg[1].substring(strg[1].lastIndexOf((previous.toString()))+(previous).toString().length, strg[1].length)
             } else {
                 url = strg[1] 
             }
